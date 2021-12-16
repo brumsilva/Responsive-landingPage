@@ -33,5 +33,62 @@ body
         @include title
     &-subtitle
         @include subtitle
+        width: 70%
     &-btn
         @include btn    
+
+.section2
+    background-color: $bg-background-secundary
+    @include d-flex
+    flex-wrap: wrap
+    justify-content: center
+    &-card
+     h4
+      font-size: 24px
+     @include title
+     @include subtitle
+     padding: 88px
+
+.section3
+    @include d-flex
+    align-items: center
+    background-color: $bg-background-secundary
+    padding: 0 60px
+    &-content
+        h2
+         @include title
+         text-align: left
+         margin-bottom: 10px
+        //  font-size: 42px
+        //  font-weight: bold
+        p
+         @include subtitle
+         text-align: left
+         margin: 0
+         margin-bottom: 10px 
+        a
+         @include subtitle
+         margin: 0
+         color: $btn-color
+         border-bottom: 1px solid $btn-color
+         padding: 2px 0
+
+.section4
+    background-color: $bg-background-secundary
+    @include d-flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 15px
+
+    &-card
+        @include card-profile
+            &:hover
+                -webkit-transform: scale3d(1.05, 1.05, 1.05)
+                transform: scale3d(1.05, 1.05, 1.05)
+                
+    &-card-perfil
+        @include d-flex
+            &-img
+                width: 50px
+                border-radius: 50%
+     
