@@ -27,22 +27,28 @@
     font-size: 16px
     color: #fff
     margin: 15px
+    padding: 0
 
 @mixin btn
     background-color: $btn-color
     font-size: 18px
     color: $bg-background
-    width: 15%
-    padding: 10px 30px
+    padding: 20px 80px
     border: none
-    border-radius: 5px
+    border-radius: 115px
     &:hover
         font-weight: bold
 
 @mixin card-profile
     width: 400px
+    height: 200px
     display: flex
+    justify-content: space-around
     gap: 20px
     background-color: #202A3C
     flex-direction: column
-    padding: 20px
+    padding: 30px
+
+@mixin input
+    width: 800px
+    padding: 30px

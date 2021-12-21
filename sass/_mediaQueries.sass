@@ -1,0 +1,39 @@
+// Variáveis do Grid
+
+//Mixins de Media Queries
+$cols: 12
+$gutter: 20px
+$mobile: 480
+$tablet: 760px
+$desktop: 1200px
+
+//box-sizing
+*, *::after, *::before
+    box-sizing: border-box
+
+//Mixin de Media Queries
+@mixin d($size)
+    @if $size == l
+        @media screen and (min-width: $desktop)
+            @content
+        
+    
+    @else if $size == m 
+            @media screen and (min-width: $tablet) and (max-width: $desktop - 1)
+                @content
+
+    @else if $size == s
+            @media screen and (min-width: $mobile) and (max-width: $tablet - 1)
+                @content
+
+
+    // background-color: blue !important
+    // @include d(m)
+    //     background-color: pink !important
+    // @include d(l)
+    //     background-color: aqua !important
+    // @include d(s)
+    //     background-color: black !important
+
+    
+//Função do grid
